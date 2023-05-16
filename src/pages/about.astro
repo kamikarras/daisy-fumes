@@ -1,21 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 
-// import { Image } from 'astro:assets';
-// import myImage from "../assets/ghost-shape.svg";
+const pageTitle = "About";
+
+const identity = {
+  firstName: "Kami",
+  country: "United States",
+  occupation: "Technical Artist",
+  hobbies: ["painting", "turning into a ghost", "friendship"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Design"];
+
+const happy = true;
+const finished = false;
+const goal =3;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={pageTitle}>
 	<main>
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
-		<h1>About <span class="text-gradient">Daisy Fumes</span></h1>
+		<h1>{pageTitle} <span class="text-gradient">Daisy Fumes</span></h1>
         <h2>Art for the soul</h2>
 		<p class="instructions">
 			Daisy Fumes is an artist sending love to her audience through her art.<br> The main operative of a daisy fumes piece is to spread peace.
 		</p>
+        <p> things about me written by astro</p>
+        <ul>
+            <li>My name is {identity.firstName}</li>
+            <li>I live in {identity.country} and I work as a {identity.occupation}</li>
+            {identity.hobbies.length >= 2 &&
+                <li>Two of my hobbies are {identity.hobbies[0]} and {identity.hobbies[1]</li>
+            }
+        </ul>}
+        <p>My skills are:</p>
+        <ul>
+            {skills.map((skill)=><li>{skill}</li>)}
+        </ul>
+        {happy && <p>I am happy to be learning astro</p>}
+        {finished && <p>I finished this tutorial</p>}
+        {goal==3 ? <p>My goal is to finish in 3 days</p>:<p>My goal is not 3 days</p>}
 	</main>
 </Layout>
 

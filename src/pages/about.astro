@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro'
 import Layout from '../layouts/Layout.astro';
 
 const pageTitle = "About";
@@ -15,13 +17,15 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Design"];
 const happy = true;
 const finished = false;
 const goal =3;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <Layout title={pageTitle}>
 	<main>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
+        <Navigation />
 		<h1>{pageTitle} <span class="text-gradient">Daisy Fumes</span></h1>
         <h2>Art for the soul</h2>
 		<p class="instructions">
@@ -37,7 +41,7 @@ const goal =3;
         </ul>}
         <p>My skills are:</p>
         <ul>
-            {skills.map((skill)=><li>{skill}</li>)}
+            {skills.map((skill)=><li class="skill">{skill}</li>)}
         </ul>
         {happy && <p>I am happy to be learning astro</p>}
         {finished && <p>I finished this tutorial</p>}
@@ -45,16 +49,17 @@ const goal =3;
 	</main>
 </Layout>
 
-<style>
+<style define:vars={{skillColor, fontWeight, textCase}}>
 	main {
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 60ch;
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: 4rem;
 		font-weight: 800;
 		margin: 0;
+        color: purple;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -88,4 +93,9 @@ const goal =3;
 		gap: 1rem;
 		padding: 0;
 	}
+    .skill{
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+    }
 </style>

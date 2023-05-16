@@ -1,6 +1,7 @@
 ---
 import  '../styles/global.css';
-import Navigation from '../components/Navigation.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
@@ -9,7 +10,7 @@ const pageTitle = "Daisy Fumes"
 
 <Layout title={pageTitle}>
 	<main>
-		<Navigation />
+		<Header />
 		<h1>Welcome to <span class="text-gradient">{pageTitle}</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
@@ -37,7 +38,7 @@ const pageTitle = "Daisy Fumes"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
-		<!-- <img src="daisy_fumes_website/src/assets/ghost-shape.svg" alt="A description of my image." width="500" height="600"/> -->
+		<Footer />
 	</main>
 </Layout>
 

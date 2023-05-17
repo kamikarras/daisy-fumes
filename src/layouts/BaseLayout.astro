@@ -12,15 +12,15 @@ const {pageTitle} = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <main>
     <Header />
-    <h1>{pageTitle}</h1>
+    <h1> <span class="text-gradient">Daisy Fumes <br></span>{pageTitle}</h1>
     <slot />
     <Footer />
     <script>
       import "../scripts/menu.js";
     </script>
-  </body>
+  </main>
 </html>
 
 <style is:global>
@@ -36,5 +36,21 @@ const {pageTitle} = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+    .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;}
+    main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+    h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
 	}
 </style>

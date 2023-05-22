@@ -1,4 +1,14 @@
 ---
-const {url, title} = Astro.props;
+import Card from './Card.astro'
+const {url, title, body, img} = Astro.props;
 ---
-<li><a href={url}>{title}</a></li>
+<div class="card-container">
+    <Card title={title} href={url} img={img} body={body} />
+</div>
+<style>
+    .card-container{
+        margin: 10px 0;
+    }
+
+
+</style>

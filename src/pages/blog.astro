@@ -1,28 +1,28 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro'
+import BlogPost from '../components/BlogPost.astro';
+
 
 const allPosts = await Astro.glob('../pages/posts/*.md')
 
-const pageTitle = "Blog"
+const pageTitle = "The Artful Ghost"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-        <h2>Art blog for the soul</h2>
-		<p class="instructions">
+		<!-- <p class="instructions">
 			Read stuff and read it now
-		</p>
+		</p> -->
 		<ul>
-
-			{allPosts.map((post)=><BlogPost url={post.url} title={post.frontmatter.title} />)}
+			<BlogPost url={allPosts[0].url} title={allPosts[0].frontmatter.title} body={allPosts[0].frontmatter.description}  img={allPosts[0].frontmatter.image.url} />
+			{allPosts.slice(1).map((post)=><BlogPost url={post.url} title={post.frontmatter.title} img={post.frontmatter.image.url} body={post.frontmatter.description} />)}
 		</ul>
 </BaseLayout>
 
 <style>
 	main {
 		margin: auto;
-		padding: 1.5rem;
+		padding: 1rem;
 		max-width: 60ch;
 	}
 	h1 {
@@ -62,4 +62,9 @@ const pageTitle = "Blog"
 		gap: 1rem;
 		padding: 0;
 	}
+
+	ul{
+		padding: 0;
+	}
+
 </style>

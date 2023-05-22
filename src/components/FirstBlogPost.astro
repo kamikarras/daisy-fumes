@@ -1,0 +1,17 @@
+---
+import BigCard from './BigCard.astro'
+const {url, title, body, img} = Astro.props;
+---
+<div class="card-container">
+    <BigCard title={title} href={url} img={img} body={body} />
+</div>
+<style>
+    .card-container{
+        /* grid-column-start: 1;
+        grid-column-end: 3; */
+        /* grid-row-start: 1;
+        grid-row-end: 3; */
+    }
+
+
+</style>

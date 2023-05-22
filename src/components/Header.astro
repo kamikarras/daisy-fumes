@@ -2,9 +2,18 @@
 import Navigation from './Navigation.astro'
 import Hamburger from './Hamburger.astro'
 import ThemeIcon from './ThemeIcon.astro';
+
+const { pageTitle } = Astro.props;
 ---
 <header>
     <Hamburger />
-    <ThemeIcon />
-        <Navigation></Navigation>
+    <h1>Daisy Fumes</h1>
+    
+    <ThemeIcon class="nav" />
+    <Navigation class="nav"></Navigation>
 </header>
+<style>
+    .nav{
+        display: inline;
+    }
+</style>

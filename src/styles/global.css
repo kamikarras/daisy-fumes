@@ -8,6 +8,13 @@ html {
     color: #fff;
   }
 
+  .page-title{
+    color:#1A4B7F;
+}
+
+.dark .page-title{
+  color:pink;
+}
   .dark .nav-links a{
     color: pink;
   }
@@ -34,11 +41,30 @@ html {
   .social{
     transition: background-color .25s;
   }
+  .dark .link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-image: var(--accent-gradient-dark);
+    
+	}
+  .dark .link-card:is(:hover, :focus-within) >a {
+		background-color: rgba(255,255,255,.8);
+    
+	}
+
+  
+  .dark .link-card{
+    background-color: rgba(255,255,255,.8);
+  }
+
+  
+  .dark .link-card > a{
+    background-color: rgba(255,255,255,0);
+  }
   
   body {
     margin: 0 auto;
     width: 100%;
-    max-width: 80ch;
+    max-width: 100ch;
     padding: 1rem;
     line-height: 1.5;
   }
@@ -77,8 +103,6 @@ html {
   .nav-links{
     width: 100%;
     top: 5rem;
-    left:38px;
-    background-color: #ff9776;
     display: none;
     margin: 0;
   }
@@ -105,11 +129,11 @@ html {
 
 @media screen and (min-width: 636px){
     .nav-links{
-        margin-left: 5em;
-        display:block;
+        display:inline-block;
         position: static;
         width: auto;
         background: none;
+        vertical-align:super;
     }
 
     .nav-links a{

@@ -14,10 +14,9 @@ const { pageTitle } = Astro.props;
   </head>
   <main>
     <Header />
-    <h1> </span>Daisy Fumes </h1>
-    <h2>{pageTitle}</h2>
+    <h2 class="page-title">{pageTitle}</h2>
     <slot />
-    <Footer />
+    <!-- <Footer /> -->
     <script>
       import "../scripts/menu.js";
     </script>
@@ -26,8 +25,9 @@ const { pageTitle } = Astro.props;
 
 <style is:global>
 	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--accent: #1A4B7F;
+		--accent-gradient: linear-gradient(45deg, var(--accent), #9BCDF0 30%, rgba(255,255,255,.6) 60%);
+		--accent-gradient-dark: linear-gradient(45deg, #E4B4D2 10%, #9BCDF0 30%, rgba(255,255,255,.6) 60%);
 		--accent-pink: #E4B4D2;
 	}
 	html {
@@ -46,12 +46,13 @@ const { pageTitle } = Astro.props;
 		background-position: 0%;}
     main {
 		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 100ch;
 	}
     h1 {
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
 	}
+    
+
 </style>

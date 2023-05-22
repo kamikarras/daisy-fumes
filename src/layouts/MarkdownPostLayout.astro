@@ -5,12 +5,16 @@ import BaseLayout from './BaseLayout.astro';
 const {frontmatter} = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <p> Written by {frontmatter.author}</p>
-    <p>{frontmatter.pubDate.slice(0,10)}</p><div class="tags">
-        <img src={frontmatter.image.url} width="100%"/>
-        {frontmatter.tags.map(tag=><p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>)}
-</div>
+  
+  <p> Written by {frontmatter.author}</p>
+  <p>{frontmatter.pubDate.slice(0,10)}</p>
+  <img src={frontmatter.image.url} width="100%"/>
+  <div class="tags">
+    {frontmatter.tags.map(tag=><p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>)}
+  </div>
+  <div class="post">
 <slot />
+  </div>
 </BaseLayout>
 <style>
     a {
@@ -22,7 +26,9 @@ const {frontmatter} = Astro.props;
       flex-wrap: wrap; 
       margin: 0 auto;  
     }
-  
+    img{
+      border: 10px solid #efefef;
+    }
     .tag {
       margin: 0.25em;
       border: dotted 1px #a1a1a1;
@@ -30,5 +36,9 @@ const {frontmatter} = Astro.props;
       padding: .5em 1em;
       font-size: 1.15em;
       background-color: #F8FCFD;
+    }
+    .post{
+      background-color: #efefef;
+      padding: 4rem;
     }
   </style>

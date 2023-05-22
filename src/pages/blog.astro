@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
+import FirstBlogPost from '../components/FirstBlogPost.astro';
 
 
 const allPosts = await Astro.glob('../pages/posts/*.md')
@@ -13,9 +14,9 @@ const pageTitle = "The Artful Ghost"
 		<!-- <p class="instructions">
 			Read stuff and read it now
 		</p> -->
-		<ul>
-			<BlogPost url={allPosts[0].url} title={allPosts[0].frontmatter.title} body={allPosts[0].frontmatter.description}  img={allPosts[0].frontmatter.image.url} />
-			{allPosts.slice(1).map((post)=><BlogPost url={post.url} title={post.frontmatter.title} img={post.frontmatter.image.url} body={post.frontmatter.description} />)}
+		<ul class="blog-container">
+			<!-- <FirstBlogPost url={allPosts[0].url} title={allPosts[0].frontmatter.title} body={allPosts[0].frontmatter.description}  img={allPosts[0].frontmatter.image.url} /> -->
+			{allPosts.map((post)=><BlogPost url={post.url} title={post.frontmatter.title} img={post.frontmatter.image.url} body={post.frontmatter.description} />)}
 		</ul>
 </BaseLayout>
 
@@ -56,15 +57,14 @@ const pageTitle = "The Artful Ghost"
 	.instructions strong {
 		color: rgb(var(--accent));
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
 
-	ul{
+
+	.blog-container{
 		padding: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		gap: 20px;
 	}
 
 </style>

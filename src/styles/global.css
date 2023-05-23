@@ -4,7 +4,7 @@
   --accent-gradient: linear-gradient(45deg, var(--accent), #9BCDF0 30%, rgba(255,255,255,.6) 60%);
   --accent-gradient-dark: linear-gradient(45deg, #E4B4D2 10%, #9BCDF0 30%, rgba(255,255,255,.6) 60%);
   --accent-pink: #E4B4D2;
-  --accent-white: var(--accent-white);
+  --accent-white: #efefef;
 }
 
 * {

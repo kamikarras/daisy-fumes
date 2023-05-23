@@ -5,95 +5,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "About";
 
-const identity = {
-  firstName: "Kami",
-  country: "United States",
-  occupation: "Technical Artist",
-  hobbies: ["painting", "turning into a ghost", "friendship"],
-};
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Design"];
-
-const happy = true;
-const finished = true;
-const goal =3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<main>
         <h2>Art for the soul</h2>
-		<p class="instructions">
-			Daisy Fumes is an artist sending love to her audience through her art.<br> The main operative of a daisy fumes piece is to spread peace.
-		</p>
-        <p> things about me written by astro</p>
-        <ul>
-            <li>My name is {identity.firstName}</li>
-            <li>I live in {identity.country} and I work as a {identity.occupation}</li>
-            {identity.hobbies.length >= 2 &&
-                <li>Two of my hobbies are {identity.hobbies[0]} and {identity.hobbies[1]</li>
-            }
-        </ul>}
-        <p>My skills are:</p>
-        <ul>
-            {skills.map((skill)=><li class="skill">{skill}</li>)}
-        </ul>
-        {happy && <p>I am happy to be learning astro</p>}
-        {finished && <p>I finished this tutorial</p>}
-        {goal==3 ? <p>My goal is to finish in 3 days</p>:<p>My goal is not 3 days</p>}
+
 	</main>
 </Layout>
 
-<style define:vars={{skillColor, fontWeight, textCase}}>
+<style >
 	main {
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 60ch;
 	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 800;
-		margin: 0;
-        /* color: purple; */
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-    .skill{
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-    }
+	h2{color: var(--accent-white)}
+	
 </style>

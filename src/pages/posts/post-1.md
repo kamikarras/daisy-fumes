@@ -5,7 +5,7 @@ pubDate: 2023-05-21
 description: 'Discover the enchanting realm where art and souls intertwine in this whimsical and tongue-in-cheek exploration. Unveiling the multi-dimensional joys of art, this article takes you on a journey through the ethereal cosmos of creative expression, supported by real research. Delve into the magical benefits that art bestows upon our spectral companions and embrace the captivating power that art holds over our souls.'
 author: 'Daisy Fumes'
 image:
-    url: '../../../public/assets/DaisyFumes3V4.jpg' 
+    url: '/assets/DaisyFumes3V4.jpg' 
     alt: 'Love your soul in blobby blue letters surrounded by a cute ghost, flowers, and hearts'
 tags: ["ghost", "soul", "art", "mental health"]
 ---

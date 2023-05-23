@@ -4,7 +4,7 @@ title: "Daisy Fumes: Art for the Soul"
 author: Daisy Fumes
 description: "Explore the profound ways in which art weaves heartfelt connections, allowing souls to communicate and nurture relationships through the multi-dimensional language of love."
 image: 
-    url: '../../../src/assets/DaisyFumes5.jpg'
+    url: '../../../public/assets/DaisyFumes5.jpg'
     alt: "Thumbnail of Astro rays."
 pubDate: 2022-07-15
 tags: ["astro", "learning in public", "setbacks", "community"]

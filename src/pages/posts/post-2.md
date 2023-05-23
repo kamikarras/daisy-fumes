@@ -4,7 +4,7 @@ title: "Art as a Love Language: The Expression of Affection through Creative Can
 author: Daisy Fumes
 description: "Explore the profound ways in which art weaves heartfelt connections, allowing souls to communicate and nurture relationships through the multi-dimensional language of love."
 image: 
-    url: '../../../src/assets/DaisyFumes6V2.jpg'
+    url: '../../../public/assets/DaisyFumes6V2.jpg'
     alt: "Cute ghosts are amazed by a flower. One is blushing and white the other two are hiding behind the blushing ghost and they are blue"
 pubDate: 2022-07-08
 tags: ["Ghost", "Love", "art", "relationships"]

@@ -1,5 +1,4 @@
 ---
-import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 const { pageTitle } = Astro.props;
@@ -16,7 +15,6 @@ const { pageTitle } = Astro.props;
     <Header />
     <h2 class="page-title">{pageTitle}</h2>
     <slot />
-    <!-- <Footer /> -->
     <script>
       import "../scripts/menu.js";
     </script>
@@ -24,35 +22,9 @@ const { pageTitle } = Astro.props;
 </html>
 
 <style is:global>
-	:root {
-		--accent: #1A4B7F;
-		--accent-gradient: linear-gradient(45deg, var(--accent), #9BCDF0 30%, rgba(255,255,255,.6) 60%);
-		--accent-gradient-dark: linear-gradient(45deg, #E4B4D2 10%, #9BCDF0 30%, rgba(255,255,255,.6) 60%);
-		--accent-pink: #E4B4D2;
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: var(--accent-pink);
-    }
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-    .text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;}
-    main {
-		margin: auto;
-		max-width: 100ch;
-	}
-    h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
+
+    
+    
     
 
 </style>

@@ -2,7 +2,6 @@
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
-import FirstBlogPost from '../components/FirstBlogPost.astro';
 
 
 const allPosts = await Astro.glob('../pages/posts/*.md')
@@ -11,60 +10,25 @@ const pageTitle = "The Artful Ghost"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-		<!-- <p class="instructions">
-			Read stuff and read it now
-		</p> -->
+
 		<ul class="blog-container">
-			<!-- <FirstBlogPost url={allPosts[0].url} title={allPosts[0].frontmatter.title} body={allPosts[0].frontmatter.description}  img={allPosts[0].frontmatter.image.url} /> -->
 			{allPosts.map((post)=><BlogPost url={post.url} title={post.frontmatter.title} img={post.frontmatter.image.url} body={post.frontmatter.description} />)}
 		</ul>
 </BaseLayout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-
-
 	.blog-container{
 		padding: 0;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: auto auto auto;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
 		gap: 20px;
 	}
-
+	@media screen and (min-width: 636px){
+		.blog-container{
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		gap: 20px;
+	}
+	}
 </style>

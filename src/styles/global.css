@@ -1,25 +1,66 @@
-html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
+/* type selectors */
+:root {
+  --accent: #1A4B7F;
+  --accent-gradient: linear-gradient(45deg, var(--accent), #9BCDF0 30%, rgba(255,255,255,.6) 60%);
+  --accent-gradient-dark: linear-gradient(45deg, #E4B4D2 10%, #9BCDF0 30%, rgba(255,255,255,.6) 60%);
+  --accent-pink: #E4B4D2;
+  --accent-white: var(--accent-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html.dark{
+  background-color: #1A4B7F;
+}
+  html {
+    font-family: system-ui, sans-serif;
+		background-color: var(--accent-pink);
   }
 
-  html.dark{
-    background-color: #1A4B7F;
-    color: #fff;
+  code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+  body {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem;
+    line-height: 1.5;
   }
+
+  main {
+		margin: auto;
+		max-width: 100ch;
+	}
+  
+  h1 {
+    margin: 1rem 0;
+    font-size: 3rem;
+    color: #1A4B7F;
+    font-weight: 800;
+  }
+
+  .dark h1{
+    color: white;
+  }
+
+  .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		-webkit-background-clip: text;
+		background-size: 400%;
+		background-position: 0%;}
 
   .page-title{
     color:#1A4B7F;
-}
-
-.dark .page-title{
-  color:pink;
-}
-  .dark .nav-links a{
-    color: pink;
   }
-  .dark .nav-links a:hover{
-    color: #f1f5f9;
+
+  .dark .page-title{
+  color:pink;
   }
 
   .dark .social{
@@ -51,7 +92,6 @@ html {
     
 	}
 
-  
   .dark .link-card{
     background-color: rgba(255,255,255,.8);
   }
@@ -61,27 +101,6 @@ html {
     background-color: rgba(255,255,255,0);
   }
   
-  body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100ch;
-    padding: 1rem;
-    line-height: 1.5;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-    color: #1A4B7F;
-  }
-
-  .dark h1{
-    color: white;
-  }
 
   /* nav styles */
   .hamburger{
@@ -119,14 +138,19 @@ html {
     transition: color .25s;
   }
 .nav-links a:hover, a:focus{
-    color: #fff;
+    color: var(--accent-white);
     transition: color .25s;
 }
-
+.dark .nav-links a{
+  color: pink;
+}
+.dark .nav-links a:hover, a:focus{
+  color: #f1f5f9;
+}
 .expanded{
     display: unset;
 }
-
+/* desktop only */
 @media screen and (min-width: 636px){
     .nav-links{
         display:inline-block;

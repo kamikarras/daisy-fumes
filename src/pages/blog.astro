@@ -12,7 +12,7 @@ const pageTitle = "The Artful Ghost"
 <BaseLayout pageTitle={pageTitle}>
 
 		<ul class="blog-container">
-			{allPosts.map((post)=><BlogPost url={post.url} title={post.frontmatter.title} img={post.frontmatter.image.url} body={post.frontmatter.description} />)}
+			{allPosts.reverse().map((post)=><BlogPost url={post.url} title={post.frontmatter.title} img={post.frontmatter.image.url} body={post.frontmatter.description} />)}
 		</ul>
 </BaseLayout>
 

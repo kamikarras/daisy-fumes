@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Exploratory Making Project 1: A Micro Zine and Playlist"
 author: Daisy Fumes
-description: "Explore the profound ways in which art weaves heartfelt connections, allowing souls to communicate and nurture relationships through the multi-dimensional language of love."
+description: "For project 1 in Exploratory making, we exchanged gifts that sprouted a seed of passion and creation. This gift resulted in me creating a micro zine and playlist."
 image: 
     url: '/assets/post4/img1.jpg'
     alt: "zine about to be cute"

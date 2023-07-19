@@ -29,7 +29,7 @@ While working on a different project I heard my roomie say “Dang Lisha learned
 
 After a detailed introduction to the JUKI sewing machine from Lisha and some practice on a random piece of material, I was ready to go. 
 
-Initially thinking I’d do a scrappy T-shirt after discussing my project with my classmate Mischka, I decided to do something simpler and do a tote. Totes have become a great medium for communicating a message. The message I want to convey is “I feel it.” I think this could mean many things, while also resonating with others who feel something big. Almost like the feeling Kermit talks about in Rainbow Connection.
+Initially thinking I’d do a scrappy T-shirt after discussing my project with my classmate Mishka, I decided to do something simpler and do a tote. Totes have become a great medium for communicating a message. The message I want to convey is “I feel it.” I think this could mean many things, while also resonating with others who feel something big. Almost like the feeling Kermit talks about in Rainbow Connection.
 
 <img width=30% src='/assets/post7/img07.jpg'>
 <img width=30% src='/assets/post7/img08.JPG'>

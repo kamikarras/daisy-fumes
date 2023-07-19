@@ -38,7 +38,7 @@ We just had to label some pins as input and some as output appropriately so we c
 Once we had the code and the pieces on the breadboard, we had the largest party by pressing the buttons and seeing the lights change. This brought me so much joy I stood up and danced.
 
 Further exploring we interacted with the IDE to read and print to the serial monitor with button and force sensors.
-I ran into a few problems here because I had miss places some of the wires and had not opened the serial monitor.
+I ran into a few problems here because I had miss placed some of the wires and had not opened the serial monitor.
 
 At first, I sat and spun on these issues, but luckily we have a really great community here and merely asking for help from those around me quickly solved the issues once I took a moment to ask.
 

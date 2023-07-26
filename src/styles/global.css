@@ -95,7 +95,13 @@ html.dark{
   .dark .link-card{
     background-color: rgba(255,255,255,.8);
   }
-
+.dark .about{
+  color: rgba(255,255,255,.8);
+}
+.about {
+  color:#1A4B7F;
+  width: 60ch;
+}
   
   .dark .link-card > a{
     background-color: rgba(255,255,255,0);

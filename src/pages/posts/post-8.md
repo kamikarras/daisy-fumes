@@ -2,11 +2,11 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Exploratory Making: Curiosity Syllabus"
 author: Daisy Fumes
-description: "After giving my conceptual gift of New Yorks Energy to my classmate, I was now tasked with giving it myself and making something with it in return."
+description: "Creating a chaotic 'curiosity syllabus' for myself, I explored artists to be inspired by and found a place to collect my thoughts."
 image: 
     url: '/assets/post8/img01.JPG'
     alt: "Mind map of Kami's Curiosities"
-pubDate: 2023-07-19
+pubDate: 2023-07-26
 tags: ["exploratory making", "daisy fumes", "curiosity", "artist direction"]
 ---
 In class this week, we had a mapping moment. We all took to a different part of the white board wall and unleashed our artist dreams onto it with dry erase markers. We wrote down mediums, concepts, curiosities, and more. Mine personally looked like this:
